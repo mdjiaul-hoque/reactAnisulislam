@@ -1,14 +1,17 @@
 import React from "react";
 // import style from '../../src/stylesheet/style.css';
 
-function Card1() {
-  const todoTitle = " call react";
-  const todoDesc =
-    " allah k jara besece valo dokko ki are trader trakte pare ? dokko ki are tader takte pare?";
+// const todoTitle = " call react";
+//   const todoDesc =
+//     " allah k jara besece valo dokko ki are trader trakte pare ? dokko ki are tader takte pare?";
   const date = new Date();
   const dateName = date.getDate();
   const monthName = date.getMonth();
   const currentYear = date.getFullYear();
+
+
+function Card1(props) {
+      const { toTitle,toDes} = props;
 
   return (
     <div>
@@ -25,9 +28,17 @@ function Card1() {
     </h1> */}
 
       
-      <div className="card">
+      {/* <div className="card">
         <h3 className="cardTitle">{todoTitle}</h3>
         <p className="cardDes">{todoDesc}</p>
+        <p className="cardFooter">{dateName + " / " + monthName + " / " + currentYear}</p>
+      </div> */}
+
+
+      {/* props */}
+      <div className="card">
+        <h3 className="cardTitle">{toTitle}</h3>
+        <p className="cardDes">{toDes}</p>
         <p className="cardFooter">{dateName + " / " + monthName + " / " + currentYear}</p>
       </div>
     </div>
