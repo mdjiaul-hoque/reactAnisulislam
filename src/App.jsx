@@ -7,10 +7,9 @@ const App = () => {
 
 console.log(Data);
 
-let items =[];
-for (let i = 0 ; i<Data.length; i++){
-  items.push( <Card1 toTitle = {Data[i].title} toDes = {Data[i].desc} />)
-}
+let items = [];
+
+items = Data.map((item)=> <Card1 toTitle = {item.title} toDes = {item.desc} /> )
 
   return (
     <div>
