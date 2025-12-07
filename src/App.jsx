@@ -7,12 +7,17 @@ const App = () => {
 
 console.log(Data);
 
+let items =[];
+for (let i = 0 ; i<Data.length; i++){
+  items.push( <Card1 toTitle = {Data[i].title} toDes = {Data[i].desc} />)
+}
+
   return (
     <div>
       <h1 className="handlingStyle">Todo App </h1>
      
-      <Card1 toTitle = {Data[0].title} toDes = {Data[0].desc} />
-      
+      {items}
+     
     </div>
   )
 };
