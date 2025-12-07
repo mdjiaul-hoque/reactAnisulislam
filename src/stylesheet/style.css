@@ -18,7 +18,6 @@
     padding: 10px;
     width: 390px;
     display: inline-block;
-    
 }
 
 .cardTitle {
@@ -28,9 +27,4 @@
 .cardDes {
     text-align: justify;
     margin-bottom: 5px;
-}
-
-.cardFooter{
-    text-align: center;
-    font-weight : bold;
 }
