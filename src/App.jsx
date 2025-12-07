@@ -1,37 +1,22 @@
 import React from 'react';
 // import Card1 from './components/Card1';
-import Data from './data.json'
+
+import Data from '../public/data.json'
+import Products from './components/Products';
 
 const App = () => {
 
-
-console.log(Data);
-
+  // console.log(Data[0].category);
 
   return (
     <div>
-      <h1 className="handlingStyle">Nested mapping </h1>
-     
       {
-        Data.map((item, index)=> 
-        <article key={index}>
-          <h3>fullName : {item.fullName}</h3>
-          <p>age: { item.age}</p>
-           
-            {
-
-              item.phones.map((phone,index)=>
-            <div key={index}> 
-              <p>home:{phone.home}</p> 
-              <p>office:{phone.office}</p> 
-            </div> 
-              )
-            }
-
-        </article> 
+        Data.map((item)=> <Products category = {item.category} description = {item.description} image = {item.image} price = {item.price} title={item.title} rating = {item.rating.rate} count = {item.rating.count}
+        
+        />
+        
         )
       }
-     
     </div>
   )
 };
