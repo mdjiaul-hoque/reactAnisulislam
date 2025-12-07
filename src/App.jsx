@@ -7,15 +7,17 @@ const App = () => {
 
 console.log(Data);
 
-let items = [];
 
-items = Data.map((item)=> <Card1 toTitle = {item.title} toDes = {item.desc} /> )
+
+ 
 
   return (
     <div>
       <h1 className="handlingStyle">Todo App </h1>
      
-      {items}
+      {
+        Data.map((item)=> <Card1 toTitle = {item.title} toDes = {item.desc} /> )
+      }
      
     </div>
   )
